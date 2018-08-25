@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,119 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Swift_IBOutletCollectionStarRating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Do-e2-7ky">
+                                <rect key="frame" x="37.5" y="304" width="300" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLy-d1-60y">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Obj-kC-hir"/>
+                                            <constraint firstAttribute="height" constant="60" id="Zaj-Ax-Tax"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="star-not-selected"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="9Lf-Wk-EA5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSv-gW-Dn4">
+                                        <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="N8V-bz-Aef"/>
+                                            <constraint firstAttribute="height" constant="60" id="QUj-gR-JEg"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="star-not-selected"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqi-Eg-vPs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VE-HC-sa8">
+                                        <rect key="frame" x="120" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="V8o-Gi-Zrq"/>
+                                            <constraint firstAttribute="width" constant="60" id="e84-fL-W4u"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="star-not-selected"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opx-XA-i96"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDv-67-XdV">
+                                        <rect key="frame" x="180" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="X1I-pP-gWg"/>
+                                            <constraint firstAttribute="height" constant="60" id="Yeb-Mo-zu3"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="star-not-selected"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJ3-dg-xhg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rou-oW-DUo">
+                                        <rect key="frame" x="240" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="2gW-14-RK2"/>
+                                            <constraint firstAttribute="height" constant="60" id="6lw-mV-L5P"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="star-not-selected"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1O-fm-shh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate US!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLy-3T-wbI">
+                                <rect key="frame" x="100.5" y="240" width="174" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="StO-Ba-xwn"/>
+                                    <constraint firstAttribute="width" constant="174" id="f67-3Q-aYv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rate score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1M-xl-QLg">
+                                <rect key="frame" x="90" y="382" width="195" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="IW9-pU-UQA"/>
+                                    <constraint firstAttribute="height" constant="21" id="o8i-EL-QXG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.37671978690000002" green="1" blue="0.60104460920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="L1M-xl-QLg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="245-98-0YS"/>
+                            <constraint firstItem="GLy-3T-wbI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8U4-iV-FKu"/>
+                            <constraint firstItem="3Do-e2-7ky" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FiS-FV-1GJ"/>
+                            <constraint firstItem="GLy-3T-wbI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GjB-yD-cVA"/>
+                            <constraint firstItem="L1M-xl-QLg" firstAttribute="top" secondItem="3Do-e2-7ky" secondAttribute="bottom" constant="18" id="Pj8-yp-ngg"/>
+                            <constraint firstItem="3Do-e2-7ky" firstAttribute="top" secondItem="GLy-3T-wbI" secondAttribute="bottom" constant="16" id="TiA-1u-AjT"/>
+                            <constraint firstItem="3Do-e2-7ky" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vvO-F1-DzW"/>
+                            <constraint firstItem="L1M-xl-QLg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zGP-KN-4qC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="rateView" destination="L1M-xl-QLg" id="PZ0-0J-3Yg"/>
+                        <outletCollection property="starButtons" destination="xLy-d1-60y" collectionClass="NSMutableArray" id="rXr-v8-oUY"/>
+                        <outletCollection property="starButtons" destination="FSv-gW-Dn4" collectionClass="NSMutableArray" id="T52-h8-lCJ"/>
+                        <outletCollection property="starButtons" destination="8VE-HC-sa8" collectionClass="NSMutableArray" id="2Ir-pu-ffD"/>
+                        <outletCollection property="starButtons" destination="fDv-67-XdV" collectionClass="NSMutableArray" id="N9A-UH-Eg9"/>
+                        <outletCollection property="starButtons" destination="Rou-oW-DUo" collectionClass="NSMutableArray" id="428-p9-RKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star-not-selected" width="136" height="127"/>
+    </resources>
 </document>

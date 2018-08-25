@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var starButtons: [UIButton]!
+    
+    @IBOutlet weak var rateView: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        print("Rated \(sender.tag) stars.")
+        rateView.text = "Rated \(sender.tag) stars."
+        for  button in starButtons {
+            if button.tag <= sender.tag {
+                button.setBackgroundImage(UIImage.init(named: "star-selected"), for: .normal)   //selectted
+            } else {
+                button.setBackgroundImage(UIImage.init(named: "star-not-selected"), for: .normal)    //not selectted
+            }
+        }
+        
+        
+        
+        
     }
-
-
+    
 }
 
